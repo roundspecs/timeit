@@ -45,5 +45,9 @@ button {
 
 input {
   padding: 5px;
-  border: 2px;
+  border: 1px;
+}
+
+input:disabled {
+  border: none;
 }
