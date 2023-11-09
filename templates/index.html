@@ -21,9 +21,8 @@
           <td>{{ task.name }}</td>
           <td>{{ task.duration }}</td>
           <td>
-            <button type="button" onclick="window.location.href='/edit/{{task.id}}?theme={{theme}}'">Edit</button>
-            <button type="button">Delete</button>
-            <button type="button">Restart</button>
+            <button type="button" onclick="window.location.href='/edit/{{ task.id }}?theme={{ theme }}'">Edit</button>
+            <button type="button" onclick="window.location.href='/delete/{{ task.id }}?theme={{ theme }}'">Delete</button>
           </td>
         </tr>
         {% endfor %}
@@ -34,14 +33,14 @@
   {% if current_task == None %}
     <p>You don't have any task running rn</p>
   {% else %}
-    <form action="" method="post">
-      <b>Current task: </b>{{ current_task }}
+    <form action="{{ url_for('stop', id=current_task.id) }}?theme={{ theme }}" method="post">
+      <b>Current task: </b>{{ current_task.name }}
       <button type="submit">Stop</button>
     </form>
     {% endif %}
   <div style="height: 30px;"></div>
-  <form action="" method="post">
-    <input type="text" name="taskname" id="taskname" required placeholder="Task name">
+  <form action="{{ url_for('add') }}?theme={{ theme }}" method="post">
+    <input type="text" name="name" required placeholder="Task name">
     <button type="submit">Start</button>
   </form>
 {% endblock content %}

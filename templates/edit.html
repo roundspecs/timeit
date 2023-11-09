@@ -2,13 +2,13 @@
 {% block content %}
   <h1>Edit Task</h1>
   <div style="height: 20px;"></div>
-  <form action="" method="post">
+  <form action="{{ url_for('update', id=task.id) }}?theme={{ theme }}" method="post">
     Taskname :
-    <input type="text" name="name" id="name" value="Make a sandwich">
+    <input type="text" name="name" id="name" value="{{ task.name }}">
     <div style="height: 10px;"></div>
     <br>
     Duration :
-    <input type="text" name="duration" id="duration" value="01:55:56">
+    <input type="text" name="duration" id="duration" value="{{ task.get_duration() }}" disabled>
     <br>
     <div style="height: 10px;"></div>
     <button type="submit">Update</button>
