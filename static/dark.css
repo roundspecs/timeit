@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #212121;
   color: whitesmoke;
 }
 
@@ -8,7 +8,7 @@ nav * {
 }
 
 input {
-  background-color: black;
+  background-color: #212121;
   border-bottom: white solid;
   color: whitesmoke;
 }

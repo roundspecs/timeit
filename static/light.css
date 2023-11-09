@@ -1,15 +1,20 @@
+body {
+  color: #212121;
+  background-color: whitesmoke;
+}
+
 nav * {
-  color: black;
+  color: #212121;
 }
 
 input {
   background-color: whitesmoke;
-  border-bottom: black solid;
-  color: black;
+  border-bottom: #212121 solid;
+  color: #212121;
 }
 
 button {
   background-color: whitesmoke;
-  border-color: gray gray black black;
-  color: black;
+  border-color: gray gray #212121 #212121;
+  color: #212121;
 }
