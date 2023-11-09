@@ -21,7 +21,7 @@
           <td>{{ task.name }}</td>
           <td>{{ task.duration }}</td>
           <td>
-            <button type="button">Edit</button>
+            <button type="button" onclick="window.location.href='/edit/{{task.id}}?theme={{theme}}'">Edit</button>
             <button type="button">Delete</button>
             <button type="button">Restart</button>
           </td>
