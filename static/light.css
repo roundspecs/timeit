@@ -1,0 +1,15 @@
+nav * {
+  color: black;
+}
+
+input {
+  background-color: whitesmoke;
+  border-bottom: black solid;
+  color: black;
+}
+
+button {
+  background-color: whitesmoke;
+  border-color: gray gray black black;
+  color: black;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeit</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  {% if dark_theme %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='dark.css') }}">
+  {% else %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='light.css') }}">
+  {% endif %}
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+</head>
+
+<body>
+  <nav>
+    <a href="">
+      <img src="{{ url_for('static', filename='favicon.png') }}" alt="Logo" height="25px">
+    </a>
+    <div class="links">
+      <div><a href=" {{ url_for('home') }}">Home</a></div>
+      |
+      {% if dark_theme %}
+      <div><a href="?theme=light">Light theme</a></div>
+      {% else %}
+      <div><a href="?theme=dark">Dark theme</a></div>
+      {% endif %}
+    </div>
+  </nav>
+  <center>
+    {% block content %} {% endblock %}
+  </center>
+</body>
+
+</html>

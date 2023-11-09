@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <h1>Edit Task</h1>
+  <div style="height: 20px;"></div>
+  <form action="" method="post">
+    Taskname :
+    <input type="text" name="name" id="name" value="Make a sandwich">
+    <div style="height: 10px;"></div>
+    <br>
+    Duration :
+    <input type="text" name="duration" id="duration" value="01:55:56">
+    <br>
+    <div style="height: 10px;"></div>
+    <button type="submit">Update</button>
+  </form>
+{% endblock %}

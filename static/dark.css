@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+
+nav * {
+  color: whitesmoke;
+}
+
+input {
+  background-color: black;
+  border-bottom: white solid;
+  color: whitesmoke;
+}
+
+button {
+  background-color: rgba(49, 49, 49, 0.788);
+  border-color: whitesmoke whitesmoke gray gray ;
+  color: whitesmoke;
+}
