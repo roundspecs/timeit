@@ -1,6 +1,19 @@
+from datetime import datetime
 from flask import Flask, request, url_for, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
+db = SQLAlchemy(app)
+
+class Task(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False, )
+    start_time = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    stop_time = db.Column(db.DateTime, nullable=True)
+
+    def __repr__(self) -> str:
+        return f"<Task: #{self.name}"
 
 tasks = [
     {"sl": 1, "id":123, "name": "Make a time tracker website", "duration": "1 hour"},
