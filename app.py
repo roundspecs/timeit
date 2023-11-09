@@ -97,3 +97,10 @@ def add():
     db.session.add(task)
     db.session.commit()
     return redirect(url_for("home") + "?theme=" + request.args.get("theme", "light"))
+
+@app.get("/reset")
+def reset():
+    db.drop_all()
+    db.create_all()
+    db.session.commit()
+    return redirect(url_for("home") + "?theme=" + request.args.get("theme", "light"))

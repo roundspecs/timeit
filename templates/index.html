@@ -28,6 +28,9 @@
         {% endfor %}
       </tbody>
     </table>
+    <form action="{{ url_for('reset') }}?theme={{ theme }}">
+      <button type="submit">Reset</button>
+    </form>
   {% endif %}
   <div style="height: 30px;"></div>
   {% if current_task == None %}
